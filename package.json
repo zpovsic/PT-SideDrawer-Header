@@ -1,0 +1,35 @@
+{
+  "name": "PolyTemplate",
+  "version": "0.0.1",
+  "description": "My template for Polymer side drawer+header",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zpovsic/PT-SideDrawer-Header"
+  },
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/zpovsic/PT-SideDrawer-Header/issues"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.1",
+    "merge-stream": "^1.0.0",
+    "plylog": "^0.4.0",
+    "polymer-build": "^0.4.0"
+  },
+  "scripts": {
+    "lint": "eslint . --ext js,html --ignore-path .gitignore",
+    "test": "npm run lint && polymer test",
+    "build": "polymer build",
+    "serve unbundled": "polymer serve build/unbundled",
+    "serve bundled": "polymer serve build/bundled",
+    "serve + watch": "polymer serve | npm run watch",
+    "watch": "browser-sync start --proxy localhost:8080 --files \"src/**/*.*, index.html, *.js\""
+  }
+}
